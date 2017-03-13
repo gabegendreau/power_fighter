@@ -3,11 +3,13 @@
 @a = "Man: \"I don't know who the fuck you are... but I know where you are... YOU'RE\nLAYING ON TOP OF MY GOD DAMNED RADISHES!\"\n\nYou look around and find that you are, in fact, laying in a small garden.\n\nMan: \"GET OUTTA HERE!\"\n\nYou barely manage to pull yourself up."
 @b = "Man: \"You're the King of darn Belgium, now move along.\"\n...\n\"C'mon... get up.\"\n\nYou: \"Why am I in a phone booth?\"\n\nMan: \"How should I know? You're scaring away my customers! Beat it!\"\n\nTo your left you see a group of parents and their children lined up at an ice\ncream cart."
 @c = "Woman: \"Oh... phew... you're not dead.\"\n\nYou: \"I'm not dead..?\"\n\nWoman: \"Oh my god, can you fucking move so I can get in my condo?\"\n\nYou vomit on the woman's shoes and she kicks you in the neck, causing you to\nfall down a small set of steps."
+@d = "Woman: \"92nd and Flavel, last stop on the last bus of the night, time to move!\"\n\nYou: \"Huh..?\""
+@e = "Dog: \"Woof\"\n\nYou: \"Were you just talking like a human?\"\n\nDog: \"Woof\""
 
 def opening_story
 
-	stories = [@a, @b, @c]
-	story_number = rand(0...3)
+	stories = [@a, @b, @c, @d, @e]
+	story_number = rand(0...5)
 	story = stories[story_number]
 	puts story
 	puts ""
