@@ -36,8 +36,8 @@ end
 
 def fight_small
 	@luck_points = 1
-	@enemy_health = rand(10..25)
-	@enemy_power = rand(10..25)
+	@enemy_health = rand(20..35)
+	@enemy_power = rand(20..35)
 	enemy_file = File.open("small_enemies.txt")
 	enemies = enemy_file.readlines
 	@enemy = enemies.sample.chomp
@@ -50,8 +50,8 @@ end
 
 def fight_med
 	@luck_points = 2
-	@enemy_health = rand(20..35)
-	@enemy_power = rand(20..35)
+	@enemy_health = rand(35..50)
+	@enemy_power = rand(35..50)
 	enemy_file = File.open("med_enemies.txt")
 	enemies = enemy_file.readlines
 	@enemy = enemies.sample.chomp
@@ -64,8 +64,8 @@ end
 
 def fight_big
 	@luck_points = 3
-	@enemy_health = rand(30..45)
-	@enemy_power = rand(30..45)
+	@enemy_health = rand(45..60)
+	@enemy_power = rand(45..60)
 	enemy_file = File.open("big_enemies.txt")
 	enemies = enemy_file.readlines
 	@enemy = enemies.sample.chomp
@@ -87,8 +87,8 @@ def being_attacked
 	else
 		puts "You beat the #{@enemy}!"
 		puts ""
-		puts "+#{@enemy_power + rand(9) + (@luck * @luck_points)} pointless points!"
-		@pointless_points += (@enemy_power + rand(9) + (@luck * @luck_points))
+		puts "+#{@enemy_power + (@luck * @luck_points)} pointless points!"
+		@pointless_points += (@enemy_power + (@luck * @luck_points))
 		controller
 	end
 end
